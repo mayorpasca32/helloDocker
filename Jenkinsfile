@@ -21,9 +21,9 @@ pipeline {
             steps {
                 script {
                     withCredentials([string(credentialsId: 'docker_hub', variable: 'docker_hub')]) {
-                    sh 'docker login -u jamesndubuisi -p ${docker_hub}'
+                    sh 'docker login -u mayorpasca32 -p ${docker_hub}'
 }
-                    sh 'docker push jamesndubuisi/hellodocker'
+                    sh 'docker push mayorpasca32/hellodocker'
                 }
             }
         }
