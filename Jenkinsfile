@@ -11,8 +11,8 @@ pipeline {
         stage('Build and Tag Docker Image') {
             steps {
                 script {
-                    sh 'docker build . -t hellodocker'
-                    sh 'docker tag hellodocker jamesndubuisi/hellodocker'
+                    sh 'docker build . -t mayorpasca32/hellodocker'
+                    sh 'docker tag hellodocker mayorpasca32/hellodocker:latest'
                 }
             }
         }
