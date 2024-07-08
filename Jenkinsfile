@@ -31,7 +31,7 @@ pipeline {
         stage('Deploy deployment and service file') {
             steps {
                 script {
-                    withKubeCredentials(kubectlCredentials: [[caCertificate: '', clusterName: '', contextName: '', credentialsId: 'da30ff86-bb62-4226-bcea-1af251cd6175', namespace: '', serverUrl: ''], [caCertificate: '', clusterName: '', contextName: '', credentialsId: '0f678a85-4f8e-4a80-ad14-c786bd7e3646', namespace: '', serverUrl: '']])
+                    kubernetesDeploy configs: 'deploymentsvc.yaml', kubeconfigId: 'kubernetes_config'
 }
                 }
             }
