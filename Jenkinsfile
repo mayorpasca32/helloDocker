@@ -31,7 +31,7 @@ pipeline {
         stage('Deploy deployment and service file') {
             steps {
                 script {
-                    withKubeCredentials(kubectlCredentials: [[caCertificate: '', clusterName: '', contextName: '', credentialsId: 'bab26ae3-9e61-4be3-b983-5dc0ccbec5d2', namespace: '', serverUrl: ''], [caCertificate: '', clusterName: '', contextName: '', credentialsId: '730da1b0-3476-4723-9e55-4b50f08bbbe1', namespace: '', serverUrl: '']])
+                    withKubeCredentials(kubectlCredentials: [[caCertificate: '', clusterName: '', contextName: '', credentialsId: 'da30ff86-bb62-4226-bcea-1af251cd6175', namespace: '', serverUrl: ''], [caCertificate: '', clusterName: '', contextName: '', credentialsId: '0f678a85-4f8e-4a80-ad14-c786bd7e3646', namespace: '', serverUrl: '']])
 }
                 }
             }
