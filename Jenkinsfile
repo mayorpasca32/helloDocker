@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     sh 'docker build . -t mayorpasca32/hellodocker'
-                    sh 'docker tag hellodocker mayorpasca32/hellodocker:latest'
+                    sh 'docker tag mayorpasca32/hellodocker mayorpasca32/hellodocker:latest'
                 }
             }
         }
@@ -31,8 +31,7 @@ pipeline {
         stage('Deploy deployment and service file') {
             steps {
                 script {
-                    kubernetesDeploy configs: 'deploymentsvc.yaml', kubeconfigId: 'kubernetes_config'
-}
+                    withKubeCredentials(kubectlCredentials: [[caCertificate: '', clusterName: '', contextName: '', credentialsId: 'bab26ae3-9e61-4be3-b983-5dc0ccbec5d2', namespace: '', serverUrl: ''], [caCertificate: '', clusterName: '', contextName: '', credentialsId: '730da1b0-3476-4723-9e55-4b50f08bbbe1', namespace: '', serverUrl: '']])
                 }
             }
         }
